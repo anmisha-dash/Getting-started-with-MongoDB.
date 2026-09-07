@@ -37,10 +37,15 @@ const User = mongoose.model("User",userSchema);
 // })
 
 //many userss
-User.insertMany([
-    {name:"Anmisha",email:"anmisha@gmail.com",age:20},
-    {name:"Ashok",email:"ashok@gmail.com",age:25},
-    {name:"zooo",email:"zoo@gmail.com",age:18}
-]).then((res)=>{console.log(res);
-});
+// User.insertMany([
+//     {name:"Anmisha",email:"anmisha@gmail.com",age:20},
+//     {name:"Ashok",email:"ashok@gmail.com",age:25},
+//     {name:"zooo",email:"zoo@gmail.com",age:18}
+// ]).then((res)=>{console.log(res);
+// });
+
+//find method
+User.findById('6a9ea89e84dc9587afb97d99')
+.then(res=>{console.log(res.name)})
+.catch((err)=>{console.log(err)});
 // const Employee = mongoose.model("Employee",userSchema);
