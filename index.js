@@ -24,8 +24,17 @@ const user1 = new User({
     email : "adam@yahoo.com",
     age:48
 });
+const user2 = new User({
+    name : "Eve",
+    email : "evee@gmail.com",
+    age: 18
+})
 
 user1.save();
+user2.save().then((res)=>{console.log(res)})
+.catch((err)=>{
+    console.log(err);
+})
 
 
 // const Employee = mongoose.model("Employee",userSchema);
