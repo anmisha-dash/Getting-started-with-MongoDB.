@@ -17,5 +17,15 @@ const userSchema = new mongoose.Schema({
 
 });
 
-// const User = mongoose.model("User",userSchema);
-const Employee = mongoose.model("Employee",userSchema);
+const User = mongoose.model("User",userSchema);
+
+const user1 = new User({
+    name : "Adam",
+    email : "adam@yahoo.com",
+    age:48
+});
+
+user1.save();
+
+
+// const Employee = mongoose.model("Employee",userSchema);
