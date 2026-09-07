@@ -45,7 +45,14 @@ const User = mongoose.model("User",userSchema);
 // });
 
 //find method
-User.findById('6a9ea89e84dc9587afb97d99')
-.then(res=>{console.log(res.name)})
-.catch((err)=>{console.log(err)});
+// User.findById('6a9ea89e84dc9587afb97d99')
+// .then(res=>{console.log(res.name)})
+// .catch((err)=>{console.log(err)});
+
+
+//update
+User.findOneAndUpdate({name:"Ashok"},{age:20})
+.then((res)=>{console.log(res)})
+.catch((err)=>{console.log(err)})
+
 // const Employee = mongoose.model("Employee",userSchema);
