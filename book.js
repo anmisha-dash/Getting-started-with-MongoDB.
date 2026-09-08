@@ -16,7 +16,8 @@ const bookSchema = new mongoose.Schema({
         required : true,
     },
     author : {
-        type : String
+        type : String,
+        min : [1,"Price is too low for amazon selling"]
     },
     price : {
         type : Number
@@ -34,8 +35,8 @@ const bookSchema = new mongoose.Schema({
 const Book = mongoose.model("Book",bookSchema);
 
 let book1 = new Book({
-    title : "Marvel Comics",
-    price : "550",
+    title : "Marvel Comics- V2",
+    price : "-670",
     category : "fictional"
 });
 
