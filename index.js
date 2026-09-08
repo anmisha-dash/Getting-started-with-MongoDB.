@@ -51,8 +51,12 @@ const User = mongoose.model("User",userSchema);
 
 
 //update
-User.findOneAndUpdate({name:"Ashok"},{age:20})
-.then((res)=>{console.log(res)})
-.catch((err)=>{console.log(err)})
+// User.findOneAndUpdate({name:"Ashok"},{age:20})
+// .then((res)=>{console.log(res)})
+// .catch((err)=>{console.log(err)})
+
+//delete
+User.findByIdAndDelete('6a9ea8a3d53a3e8d783456ae').then((res)=>{console.log(res)})
+.catch((err)=>{console.log(err)});
 
 // const Employee = mongoose.model("Employee",userSchema);
